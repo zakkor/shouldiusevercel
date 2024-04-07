@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Should I use Vercel?</title>
+  </head>
+  <body style="display: flex; flex-direction: column">
+    <h2 style="text-align: center">Should I use Vercel?</h2>
+
+    <h1 style="text-align: center; margin-bottom: 48px">
+      1. Do you have any idea what you're doing, in general?
+    </h1>
+    <div
+      style="
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      "
+    >
+      <button
+        onclick="
+        document.querySelector('h1').remove();
+        document.querySelectorAll('button').forEach(el => el.remove());
+        const answer = document.createElement('h1');
+        answer.innerText = 'You should NOT use Vercel.';
+        answer.style.textAlign = 'center';
+        answer.style.color = 'red';
+        document.querySelector('body').appendChild(answer);"
+        style="width: 50%; height: 90px; font-size: 24px"
+      >
+        Yes
+      </button>
+      <button
+        style="width: 50%; height: 90px; font-size: 24px"
+        onclick="
+        document.querySelector('h1').remove();
+        document.querySelectorAll('button').forEach(el => el.remove());
+        const answer = document.createElement('h1');
+        answer.innerText = 'You SHOULD use Vercel.';
+        answer.style.textAlign = 'center';
+        answer.style.color = 'green';
+        document.querySelector('body').appendChild(answer);"
+      >
+        No
+      </button>
+    </div>
+  </body>
+</html>
